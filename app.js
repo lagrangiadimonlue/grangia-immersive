@@ -477,6 +477,9 @@ async function showScene(index, direction = 1) {
   state.index = index;
   const scene = scenes[index];
   renderScene(scene);
+  // Dense scenes can be longer than a phone viewport. Always begin each scene
+  // at its heading instead of retaining the previous scene's scroll position.
+  dom.experience.scrollTop = 0;
 
   gsap.set(dom.scene, { opacity: 1, x: 0 });
   const animatedContent = scene.paper

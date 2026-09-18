@@ -230,8 +230,11 @@ button {
 
 .experience {
   display: grid;
+  height: 100dvh;
   align-items: center;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   padding-bottom: calc(var(--bar-height) + clamp(28px, 4vh, 54px));
 }
 
@@ -538,7 +541,7 @@ button {
     align-items: start;
     overflow-y: auto;
     padding-top: calc(var(--bar-height) + 34px);
-    padding-bottom: calc(132px + env(safe-area-inset-bottom));
+    padding-bottom: calc(144px + env(safe-area-inset-bottom));
   }
 
   .scene-title {
