@@ -1,10 +1,11 @@
 :root {
-  color-scheme: light;
-  --ink: #191a18;
-  --muted: #666761;
-  --paper: #ecebe6;
-  --paper-deep: #e2e1db;
-  --line: rgba(25, 26, 24, 0.2);
+  color-scheme: dark;
+  --ink: #f4f1e9;
+  --muted: #b9b6ae;
+  --paper: #171816;
+  --paper-deep: #10110f;
+  --line: rgba(244, 241, 233, 0.2);
+  --paper-ink: #191a18;
   --bar-height: 76px;
   --side: clamp(22px, 4.2vw, 72px);
   --red: #d45b52;
@@ -78,7 +79,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(236, 235, 230, 0.82);
+  background: rgba(23, 24, 22, 0.82);
 }
 
 .app.is-home .photo-background,
@@ -87,7 +88,7 @@ button {
 }
 
 .app.is-home .photo-background::after {
-  background: linear-gradient(90deg, rgba(236, 235, 230, 0.98) 0 44%, rgba(236, 235, 230, 0.72) 76%, rgba(236, 235, 230, 0.52));
+  background: linear-gradient(90deg, rgba(16, 17, 15, 0.98) 0 44%, rgba(16, 17, 15, 0.76) 76%, rgba(16, 17, 15, 0.54));
 }
 
 .topbar {
@@ -103,26 +104,21 @@ button {
   gap: 24px;
   padding: 0 var(--side);
   border-bottom: 1px solid var(--line);
-  background: rgba(236, 235, 230, 0.88);
+  background: rgba(23, 24, 22, 0.9);
   backdrop-filter: blur(14px);
 }
 
 .wordmark {
   display: inline-flex;
-  align-items: baseline;
-  gap: 7px;
-  color: inherit;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 13px;
-  font-weight: 700;
+  align-items: center;
 }
 
-.wordmark small {
-  color: var(--muted);
-  font-size: 10px;
-  font-weight: 400;
+.wordmark img {
+  display: block;
+  width: auto;
+  height: 42px;
+  max-width: min(42vw, 170px);
+  object-fit: contain;
 }
 
 .topbar-status {
@@ -228,8 +224,8 @@ button {
 
 .button-primary:hover:not(:disabled),
 .button-primary:focus-visible {
-  color: white;
-  background: #343531;
+  color: #11120f;
+  background: #fffdf6;
 }
 
 .experience {
@@ -295,6 +291,7 @@ button {
   width: min(820px, 100%);
   margin: clamp(28px, 5vh, 54px) auto 0;
   padding: clamp(28px, 4vw, 58px);
+  color: var(--paper-ink);
   border: 1px solid rgba(25, 26, 24, 0.22);
   background: var(--paper-color);
   box-shadow: 14px 18px 0 rgba(25, 26, 24, 0.08);
@@ -438,7 +435,7 @@ button {
   gap: 20px;
   padding: 10px var(--side) calc(10px + env(safe-area-inset-bottom));
   border-top: 1px solid var(--line);
-  background: rgba(236, 235, 230, 0.92);
+  background: rgba(23, 24, 22, 0.94);
   backdrop-filter: blur(14px);
 }
 
@@ -501,8 +498,9 @@ button {
     gap: 8px;
   }
 
-  .wordmark small {
-    display: none;
+  .wordmark img {
+    height: 36px;
+    max-width: 52vw;
   }
 
   .home-actions {

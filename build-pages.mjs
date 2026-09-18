@@ -10,6 +10,7 @@ const publicFiles = [
   'styles.css',
   'app.js',
   'assets/img/grangia.jpg',
+  'assets/img/grangia-logo.png',
   'assets/vendor/gsap.min.js',
 ];
 
