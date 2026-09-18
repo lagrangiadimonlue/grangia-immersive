@@ -56,6 +56,7 @@ const scenes = [
     title: 'Se sei ancora qui è perché hai accettato il nostro invito…',
     body: ['BUON VIAGGIO!'],
     duration: 9,
+    typography: 'sendoff',
   },
   {
     slide: 3,
@@ -133,6 +134,7 @@ const scenes = [
     ],
     duration: 22,
     dense: true,
+    typography: 'departure',
   },
   {
     slide: 10,
@@ -215,6 +217,7 @@ const scenes = [
       hint: 'La domanda può restare aperta.',
       button: 'Continua',
     },
+    typography: 'revelation',
   },
   {
     slide: 17,
@@ -423,7 +426,7 @@ function updateControls(scene) {
 function renderScene(scene) {
   dom.app.classList.toggle('has-photo', Boolean(scene.photo));
   dom.app.classList.toggle('has-reflection', Boolean(scene.paper));
-  dom.scene.className = `scene${scene.dense ? ' is-dense' : ''}${scene.paper ? ' has-paper' : ''}`;
+  dom.scene.className = `scene${scene.dense ? ' is-dense' : ''}${scene.paper ? ' has-paper' : ''}${scene.typography ? ` is-${scene.typography}` : ''}`;
   dom.sceneKicker.textContent = '';
   dom.sceneKicker.hidden = true;
   dom.sceneTitle.textContent = scene.title || '';
