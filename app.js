@@ -55,7 +55,7 @@ const PAPER_COLORS = {
 
 const scenes = [
   {
-    slide: 2,
+    slide: 1,
     label: 'L’invito',
     title: 'Buongiorno, sei pronto per immergerti in un’esperienza riflessiva?',
     body: ['Ti anticipiamo che sarà un po’ impegnativa, ma crediamo possa avere un forte valore…'],
@@ -63,27 +63,27 @@ const scenes = [
     duration: 14,
   },
   {
-    slide: 3,
+    slide: 2,
     label: 'Prima di partire',
     title: 'Se sei ancora qui è perché hai accettato il nostro invito…',
-    body: ['Buon viaggio!'],
+    body: ['BUON VIAGGIO!'],
     track: 'new1',
     duration: 9,
   },
   {
-    slide: 4,
+    slide: 3,
     label: 'Come funziona',
-    title: 'Nel corso della storia troverai alcune domande che guideranno il tuo pensiero…',
-    body: ['Di volta in volta ti indicheremo il colore di un foglietto su cui scrivere le risposte in modo anonimo. Poi potrai riporre il foglietto nella scatola dello stesso colore.'],
+    title: 'Nel corso della storia, troverai alcune domande che guideranno il tuo pensiero…',
+    body: ['Di volta in volta ti indicheremo il colore di un foglietto su cui scrivere le risposte in modo anonimo, poi potrai riporre il foglietto nella scatola dello stesso colore.'],
     track: 'new1',
     duration: 18,
     dense: true,
   },
   {
-    slide: 5,
+    slide: 4,
     label: 'La tua vita',
-    title: 'Pensa qualche secondo alla tua attuale vita…',
-    body: ['In questa storia sei proprio tu, con le gioie e le fatiche che la vita porta con sé…'],
+    title: 'Ti chiediamo di riflettere…',
+    body: ['Pensa qualche secondo alla tua attuale vita…', 'In questa storia, sei proprio tu, con le gioie e le fatiche che la vita porta con sé…'],
     track: 'new1',
     checkpoint: {
       minimum: 8,
@@ -92,34 +92,33 @@ const scenes = [
     },
   },
   {
-    slide: 6,
+    slide: 5,
     label: 'Immagina',
-    title: 'Nella tua città e nel tuo Stato ci sono grandi problemi, molto grandi…',
-    body: ['Prova a immaginarti un problema talmente grande che ha a che fare con la sopravvivenza…'],
+    title: 'Ora ti chiediamo di immaginare …',
+    body: ['Nella tua città e nel tuo stato ci sono grandi problemi, molto grandi…', '… un problema talmente grande che ha a che fare con la sopravvivenza…'],
     track: null,
     duration: 16,
   },
   {
-    slide: 7,
+    slide: 6,
     label: 'La decisione',
-    title: 'Prendi la decisione di partire.',
+    title: 'Prendi la decisione di partire, migrare, è la soluzione che ti sembra migliore viste le condizioni, non sai di preciso dove andrai…',
     body: [
-      'Migrare è la soluzione che ti sembra migliore, viste le condizioni. Non sai di preciso dove andrai…',
-      'A prescindere dalla tua situazione familiare, le condizioni ti obbligano a partire in solitaria. Sai che sarà complesso e provi la via per poi, eventualmente, facilitare altri componenti della tua famiglia.',
+      'Immagina: a prescindere dalla tua situazione familiare, le condizioni ti obbligano a partire in solitaria … sai che sarà complesso e tu provi la via per poi eventualmente facilitare altri componenti della tua famiglia.',
     ],
     track: 'new2',
     duration: 22,
     dense: true,
   },
   {
-    slide: 8,
+    slide: 7,
     label: 'Foglietto rosso',
     track: 'new2',
     paper: {
       color: 'red',
-      label: 'Scrivi poche parole sul foglietto rosso',
+      label: 'Scrivi poche parole sul FOGLIETTO ROSSO',
       question: 'Quali emozioni provi all’idea di dover lasciare la tua attuale vita in condizioni d’emergenza, verso l’ignoto e lasciando persone care?',
-      instruction: 'Quando hai risposto, riponi il cartoncino nella scatola rossa.',
+      instruction: 'Quando hai risposto riponi il cartoncino nella scatola rossa',
     },
     checkpoint: {
       minimum: 12,
@@ -128,14 +127,14 @@ const scenes = [
     },
   },
   {
-    slide: 9,
+    slide: 8,
     label: 'Foglietto arancione',
     track: 'new2',
     paper: {
       color: 'orange',
-      label: 'Scrivi poche parole sul foglietto arancione',
-      question: 'Quali emozioni provi all’idea di cosa ti aspetta nel luogo, che non conosci, dove andrai?',
-      instruction: 'Quando hai risposto, riponi il cartoncino nella scatola arancione.',
+      label: 'Scrivi poche parole sul FOGLIETTO ARANCIONE',
+      question: 'Quali emozioni provi all’idea di cosa ti aspetta nel luogo (che non conosci) dove andrai?',
+      instruction: 'Quando hai risposto riponi il cartoncino nella scatola arancione',
     },
     checkpoint: {
       minimum: 12,
@@ -144,11 +143,11 @@ const scenes = [
     },
   },
   {
-    slide: 10,
+    slide: 9,
     label: 'Il viaggio',
-    title: 'Parti. Il viaggio è lungo e complesso.',
+    title: 'Parti.',
     body: [
-      'Ci sono tante difficoltà, alcune che ti mettono a rischio vita, ma tu sopravvivi. Non tutte le persone accanto a te hanno la stessa sorte…',
+      'Il viaggio è lungo e complesso, ci sono tante difficoltà, alcune che ti mettono a rischio vita, ma tu sopravvivi, non tutte le persone accanto a te hanno la stessa sorte…',
       'Ti richiede molti più soldi di quelli che avevi preventivato e anche tante energie fisiche e mentali.',
     ],
     track: 'new2',
@@ -156,11 +155,10 @@ const scenes = [
     dense: true,
   },
   {
-    slide: 11,
+    slide: 10,
     label: 'La destinazione',
-    title: 'Giungi a destinazione senza soldi, con tanta stanchezza.',
+    title: 'Giungi a destinazione senza soldi (li hai terminati nel viaggio), con tanta stanchezza e senza conoscere nessuno tranne poche persone incontrate sulla strada, con le quali hai condiviso tante fatiche, ma non le conosci davvero…',
     body: [
-      'Non conosci nessuno tranne poche persone incontrate sulla strada, con le quali hai condiviso tante fatiche, ma che non conosci davvero…',
       'Non sai parlare la lingua di questo nuovo Paese…',
     ],
     track: 'new2',
@@ -168,32 +166,32 @@ const scenes = [
     dense: true,
   },
   {
-    slide: 12,
+    slide: 11,
     label: 'L’arrivo',
-    title: 'Non sai dove andare e cosa fare.',
-    body: ['Non hai soldi, senti tanta stanchezza addosso, hai fame e ti senti male…', 'Inoltre sei molto, molto triste…'],
+    title: 'Non sai dove andare e cosa fare, non hai soldi, ti senti tanta stanchezza addosso, hai fame e ti senti male…',
+    body: [],
     track: 'new2',
     duration: 17,
   },
   {
-    slide: 13,
+    slide: 12,
     label: 'L’attesa',
-    title: 'Scopri che ci sono luoghi dove puoi essere ospitato.',
+    title: 'Da alcuni conoscenti scopri che ci sono dei luoghi dove puoi essere ospitato, ti dicono dove andare…',
     body: [
-      'Ci vai, ma non avevi capito che c’era una lista d’attesa per l’ingresso…',
-      'Ti dicono dove andare a mangiare provvisoriamente. Mentre attendi alcuni giorni, dormi per strada. Per fortuna è estate.',
+      'Ci vai, non avevi capito che ci fosse una lista d’attesa per l’ingresso…',
+      'Ti dicono dove andare a mangiare provvisoriamente, mentre attendi alcuni giorni l’ingresso… dormi per strada, per fortuna è estate!',
     ],
     track: 'new2',
     duration: 22,
     dense: true,
   },
   {
-    slide: 14,
+    slide: 13,
     label: 'Il centro d’accoglienza',
-    title: 'Finalmente arriva il giorno dell’ingresso nel centro d’accoglienza.',
+    title: 'Finalmente arriva il giorno dell’ingresso nel centro d’accoglienza!',
     body: [
-      'Ti accolgono delle persone professioniste che ti leggono tante regole della casa e ti consegnano un regolamento tradotto nella tua lingua. Da quanto comprendi avrai una stanza che condividerai con un’altra persona.',
-      'Non capisci proprio tutte le regole, ma la stanchezza ti impedisce di fare domande. Vuoi riposarti.',
+      'Ti accolgono delle persone professioniste che ti leggono tante regole della casa e ti consegnano un regolamento che è tradotto nella tua lingua. Da quanto comprendi avrai una stanza che condividerai con un’altra persona.',
+      'Non capisci proprio tutte le regole, ma la stanchezza ti impedisce di fare domande, vuoi riposarti.',
     ],
     track: 'new2',
     duration: 24,
@@ -201,12 +199,12 @@ const scenes = [
     photo: true,
   },
   {
-    slide: 15,
+    slide: 14,
     label: 'I giorni successivi',
-    title: 'Inizi a conoscere la casa dove sarai ospite per qualche tempo.',
+    title: 'Durante i giorni successivi inizi a conoscere la casa dove sarai ospite per qualche tempo…',
     body: [
-      'Se non hai capito male, sei mesi… Ti manca tanto la tua famiglia e il tuo Paese, anche se sai che non potevi restare là.',
-      'Finalmente ti riposi un po’. La stanchezza fisica e mentale accumulata è davvero tanta; non avresti mai immaginato di sentirti così.',
+      'Ti manca tanto la tua famiglia e il tuo Paese anche se sai che non potevi restare là…',
+      'Finalmente ti riposi un po’… la stanchezza fisica e mentale accumulata è davvero tanta, non avresti mai immaginato di sentirti così!',
     ],
     track: 'new2',
     duration: 23,
@@ -214,13 +212,13 @@ const scenes = [
     photo: true,
   },
   {
-    slide: 16,
+    slide: 15,
     label: 'Foglietto giallo',
     track: 'new3',
     paper: {
       color: 'yellow',
-      label: 'Prendi il foglietto giallo',
-      question: 'Ora che sei in accoglienza, di cosa senti che avresti bisogno per sentirti bene?',
+      label: 'Prendi il FOGLIETTO GIALLO',
+      question: 'Ora che sei in accoglienza… Di cosa senti che avresti bisogno per sentirti bene?',
       instruction: 'Pensa e scrivi tutti i bisogni e i desideri che ti vengono in mente.',
     },
     checkpoint: {
@@ -230,13 +228,13 @@ const scenes = [
     },
   },
   {
-    slide: 17,
+    slide: 16,
     label: 'Bisogni e desideri',
     title: 'È stato facile rispondere alla domanda precedente?',
     body: [
       'Non ti chiediamo di scriverlo…',
       'Sappi che per persone traumatizzate individuare e pensare ai propri desideri è molto difficile…',
-      'Ma il desiderio è ciò che ci rende vivi.',
+      'Ma il desiderio è ciò che ci rende vivi!',
     ],
     track: 'new3',
     checkpoint: {
@@ -246,24 +244,37 @@ const scenes = [
     },
   },
   {
-    slide: 18,
+    slide: 17,
     label: 'Nuove complessità',
-    title: 'Le complessità non sono terminate. Si sono modificate.',
+    title: 'Sei in questo nuovo Paese da un po’ di tempo, ma le complessità non sono terminate, solo modificate.',
     body: [
-      'Sei in questo nuovo Paese da un po’ di tempo. Ti avevano detto che con l’arrivo a destinazione tutto sarebbe stato in discesa, ma non è così…',
-      'I documenti sono molto difficili da ottenere, sia per la burocrazia sia per il trattamento durante gli accessi in Questura. Spesso è mortificante…',
+      'Questo aspetto non lo avevi considerato.',
+      'Immaginavi che con l’arrivo a destinazione tutto sarebbe stato in discesa, ma non è così…',
+      'I documenti sono molto difficili da ottenere sia per la burocrazia, ma anche per il trattamento durante gli accessi in Questura… Spesso è mortificante…',
     ],
     track: 'new3',
     duration: 24,
     dense: true,
   },
   {
-    slide: 19,
+    slide: 18,
     label: 'Lingua e lavoro',
-    title: 'Imparare la nuova lingua è davvero complesso.',
+    title: 'Imparare la nuova lingua è davvero complesso, soprattutto perché ci sono sempre tanti pensieri che ti affollano la mente… e poi… hai bisogno di lavorare, ma non trovi lavoro!',
     body: [
-      'Ci sono sempre tanti pensieri che ti affollano la mente. Hai bisogno di lavorare, ma non trovi lavoro.',
-      'La mancata conoscenza della lingua ti frena e ti chiedono competenze molto diverse da quelle che hai. Eppure te la sei sempre cavata nella vita e nel tuo Paese sentivi di avere un valore come persona. Qui, a volte, ti viene da dubitarne rispetto a questi standard.',
+      'L’assenza dalla conoscenza della lingua ti frena e soprattutto ti chiedono competenze molto diverse da quelle che tu hai… eppure te la sei sempre cavata nella vita e nel tuo Paese sentivi di avere un valore come persona… qui a volte ti viene da dubitarne… rispetto a questi standard.',
+    ],
+    track: 'new3',
+    duration: 26,
+    dense: true,
+  },
+  {
+    slide: 19,
+    label: 'Le discriminazioni',
+    title: 'Altra cosa che non avevi considerato: quanto è difficile avere un colore della pelle diverso dalla maggior parte delle persone che vivono nel Paese dove abiti!',
+    body: [
+      'Perché è così importante? E perché in molte situazioni ti capita di subire insulti e discriminazioni per questo?',
+      'Capita così tante volte e quasi ti ci stai abituando, ma non bisogna abituarsi!',
+      'Nota tecnica: si chiamano «micro aggressioni», sono sottili, quasi invisibili, ma hanno un impatto negativo fortissimo sulla persona!',
     ],
     track: 'new3',
     duration: 26,
@@ -272,8 +283,8 @@ const scenes = [
   {
     slide: 20,
     label: 'La famiglia',
-    title: 'Da quando sei in accoglienza riesci a contattare la tua famiglia…',
-    body: ['Non stanno bene. Ti chiedono quando possono raggiungerti e di mandare loro dei soldi…', 'Ma tu non sai come aiutarli…'],
+    title: 'Da quando sei in accoglienza, riesci a contattare la tua famiglia…',
+    body: ['Non stanno bene, ti chiedono quando possono raggiungerti e di mandargli soldi… ma tu non sai come aiutarli …'],
     track: 'new3',
     duration: 18,
     dense: true,
@@ -281,10 +292,10 @@ const scenes = [
   {
     slide: 21,
     label: 'Ci fermiamo qui',
-    title: 'La storia continua, per ogni persona in un modo diverso…',
+    title: 'La storia continua … per ogni persona in un modo diverso …',
     body: [
-      'Ci fermiamo qui nel nostro viaggio.',
-      'Tutte le persone sono piene di risorse e competenze che sicuramente metteranno in campo. Ma forse, su temi così ampi e complessi, sarebbe importante una riflessione che va oltre l’individuale…',
+      'Ci fermiamo qui nel nostro viaggio…',
+      'Tutte le persone sono piene di risorse e competenze che sicuramente metteranno in campo, ma forse, su temi così ampi e complessi, sarebbe importante una riflessione che va oltre l’individuale …',
     ],
     track: 'new3',
     duration: 22,
@@ -296,9 +307,9 @@ const scenes = [
     track: 'new3',
     paper: {
       color: 'blue',
-      label: 'Prendi il foglietto azzurro',
-      question: 'Cosa credi che potresti fare tu, o anche noi, per supportare le persone migranti?',
-      instruction: 'Scrivi qualche idea e riponi il cartoncino nella scatola azzurra.',
+      label: 'Prendi il FOGLIETTO AZZURRO',
+      question: 'Cosa credi che potresti fare tu o anche noi per supportare le persone migranti?',
+      instruction: '',
     },
     checkpoint: {
       minimum: 15,
@@ -311,8 +322,8 @@ const scenes = [
     label: 'Prima di concludere',
     title: 'È stato complesso questo tuo viaggio immaginario?',
     body: [
-      'Se lo desideri, nell’altra stanza puoi trovare un albo illustrato sul trauma: si intitola «Il buco». Puoi leggerlo se vuoi.',
-      'Gli albi illustrati non sono pensati solo per i bambini, ma aiutano a riflettere anche gli adulti, in modo leggero e profondo, dando segnali di speranza.',
+      'Se lo desideri nell’altra stanza puoi trovare un albo illustrato sul trauma, si intitola «Il buco». Puoi leggerlo se lo vuoi.',
+      'Gli albi illustrati non sono pensati solo per i bimbi, ma aiutano a riflettere anche gli adulti, in modo leggero e profondo, dando segnali di speranza.',
     ],
     track: 'new3',
     checkpoint: {
@@ -325,11 +336,11 @@ const scenes = [
   {
     slide: 24,
     label: 'Grazie',
-    title: 'Grazie per aver scelto di fare questo viaggio.',
+    title: 'Grazie per aver scelto di fare questo viaggio!',
     body: [
       'Le persone accolte dalla Grangia di Monluè ne hanno fatti tanti e ancora ne faranno, ma anche tu sei in viaggio nella tua vita…',
-      'Chissà quali meravigliosi incontri ci porteranno questi viaggi. Magari alcuni tratti del nostro cammino si incroceranno, come oggi.',
-      'È stato bello incontrarsi.',
+      'Chissà quali meravigliosi incontri ci porteranno questi viaggi, magari alcuni tratti del nostro cammino si incroceranno… come oggi!',
+      'È stato bello incontrarsi!',
     ],
     track: 'new3',
     final: true,
@@ -530,14 +541,16 @@ function updateControls(scene) {
   dom.previousBtn.disabled = state.index === 0 || state.transitioning;
   dom.nextBtn.disabled = Boolean(scene.final || state.transitioning || (scene.checkpoint && !state.gateUnlocked));
   dom.pauseBtn.disabled = state.transitioning;
-  dom.sceneCounter.textContent = `${String(state.index + 1).padStart(2, '0')} / ${scenes.length} · ${scene.label}`;
+  dom.sceneCounter.textContent = `${String(state.index + 1).padStart(2, '0')} / ${scenes.length}`;
   dom.overallProgress.style.width = `${((state.index + 1) / scenes.length) * 100}%`;
 }
 
 function renderScene(scene) {
   dom.app.classList.toggle('has-photo', Boolean(scene.photo));
+  dom.app.classList.toggle('has-reflection', Boolean(scene.paper));
   dom.scene.className = `scene${scene.dense ? ' is-dense' : ''}${scene.paper ? ' has-paper' : ''}`;
-  dom.sceneKicker.textContent = `${String(scene.slide).padStart(2, '0')} · ${scene.label}`;
+  dom.sceneKicker.textContent = '';
+  dom.sceneKicker.hidden = true;
   dom.sceneTitle.textContent = scene.title || '';
   dom.sceneBody.innerHTML = paragraphs(scene.body);
 
@@ -547,8 +560,10 @@ function renderScene(scene) {
     dom.paperLabel.textContent = scene.paper.label;
     dom.paperQuestion.textContent = scene.paper.question;
     dom.paperInstruction.textContent = scene.paper.instruction;
+    dom.paperInstruction.hidden = !scene.paper.instruction;
   } else {
     dom.reflectionPaper.hidden = true;
+    dom.paperInstruction.hidden = false;
   }
 
   if (scene.checkpoint) {
@@ -724,6 +739,7 @@ function goHome() {
 
   dom.app.classList.add('is-home');
   dom.app.classList.remove('has-photo');
+  dom.app.classList.remove('has-reflection');
   dom.experience.hidden = true;
   dom.controls.hidden = true;
   dom.countdown.hidden = true;
