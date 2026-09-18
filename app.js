@@ -519,6 +519,7 @@ function setPaused(paused) {
 
 async function playCountdown() {
   dom.countdown.hidden = false;
+  dom.countdownValue.classList.remove('countdown-message');
   for (const number of [5, 4, 3, 2, 1]) {
     dom.countdownValue.textContent = number;
     await animate(dom.countdownValue, { opacity: 0, scale: 0.88 }, {
@@ -531,6 +532,7 @@ async function playCountdown() {
     await animate(dom.countdownValue, { opacity: 1 }, { opacity: 0, duration: 0.18 });
   }
   dom.countdownValue.textContent = 'Buon viaggio';
+  dom.countdownValue.classList.add('countdown-message');
   await animate(dom.countdownValue, { opacity: 0, scale: 0.96 }, {
     opacity: 1,
     scale: 1,
