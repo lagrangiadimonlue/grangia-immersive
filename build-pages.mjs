@@ -9,9 +9,6 @@ const publicFiles = [
   'index.html',
   'styles.css',
   'app.js',
-  'assets/audio/new1.mp3',
-  'assets/audio/new2.mp3',
-  'assets/audio/new3.mp3',
   'assets/img/grangia.jpg',
   'assets/vendor/gsap.min.js',
 ];

@@ -6,8 +6,6 @@ const dom = {
   homeScreen: $('#homeScreen'),
   experience: $('#experience'),
   startBtn: $('#startBtn'),
-  presenterMode: $('#presenterMode'),
-  presenterBadge: $('#presenterBadge'),
   sceneCounter: $('#sceneCounter'),
   overallProgress: $('#overallProgress'),
   scene: $('#scene'),
@@ -23,7 +21,6 @@ const dom = {
   checkpointBtn: $('#checkpointBtn'),
   finalActions: $('#finalActions'),
   restartBtn: $('#restartBtn'),
-  autoRestart: $('#autoRestart'),
   countdown: $('#countdown'),
   countdownValue: $('#countdownValue'),
   pauseNotice: $('#pauseNotice'),
@@ -35,15 +32,7 @@ const dom = {
   pauseLabel: $('#pauseLabel'),
   nextBtn: $('#nextBtn'),
   sceneProgress: $('#sceneProgress'),
-  muteBtn: $('#muteBtn'),
-  volumeSlider: $('#volumeSlider'),
   fullscreenBtn: $('#fullscreenBtn'),
-};
-
-const audio = {
-  new1: $('#audioNew1'),
-  new2: $('#audioNew2'),
-  new3: $('#audioNew3'),
 };
 
 const PAPER_COLORS = {
@@ -59,7 +48,6 @@ const scenes = [
     label: 'L’invito',
     title: 'Buongiorno, sei pronto per immergerti in un’esperienza riflessiva?',
     body: ['Ti anticipiamo che sarà un po’ impegnativa, ma crediamo possa avere un forte valore…'],
-    track: 'new1',
     duration: 14,
   },
   {
@@ -67,7 +55,6 @@ const scenes = [
     label: 'Prima di partire',
     title: 'Se sei ancora qui è perché hai accettato il nostro invito…',
     body: ['BUON VIAGGIO!'],
-    track: 'new1',
     duration: 9,
   },
   {
@@ -75,7 +62,6 @@ const scenes = [
     label: 'Come funziona',
     title: 'Nel corso della storia, troverai alcune domande che guideranno il tuo pensiero…',
     body: ['Di volta in volta ti indicheremo il colore di un foglietto su cui scrivere le risposte in modo anonimo, poi potrai riporre il foglietto nella scatola dello stesso colore.'],
-    track: 'new1',
     duration: 18,
     dense: true,
   },
@@ -84,7 +70,6 @@ const scenes = [
     label: 'La tua vita',
     title: 'Ti chiediamo di riflettere…',
     body: ['Pensa qualche secondo alla tua attuale vita…', 'In questa storia, sei proprio tu, con le gioie e le fatiche che la vita porta con sé…'],
-    track: 'new1',
     checkpoint: {
       minimum: 8,
       hint: 'Prenditi qualche secondo. Non devi scrivere nulla.',
@@ -96,7 +81,6 @@ const scenes = [
     label: 'Immagina',
     title: 'Ora ti chiediamo di immaginare …',
     body: ['Nella tua città e nel tuo stato ci sono grandi problemi, molto grandi…', '… un problema talmente grande che ha a che fare con la sopravvivenza…'],
-    track: null,
     duration: 16,
   },
   {
@@ -106,14 +90,12 @@ const scenes = [
     body: [
       'Immagina: a prescindere dalla tua situazione familiare, le condizioni ti obbligano a partire in solitaria … sai che sarà complesso e tu provi la via per poi eventualmente facilitare altri componenti della tua famiglia.',
     ],
-    track: 'new2',
     duration: 22,
     dense: true,
   },
   {
     slide: 7,
     label: 'Foglietto rosso',
-    track: 'new2',
     paper: {
       color: 'red',
       label: 'Scrivi poche parole sul FOGLIETTO ROSSO',
@@ -129,7 +111,6 @@ const scenes = [
   {
     slide: 8,
     label: 'Foglietto arancione',
-    track: 'new2',
     paper: {
       color: 'orange',
       label: 'Scrivi poche parole sul FOGLIETTO ARANCIONE',
@@ -150,7 +131,6 @@ const scenes = [
       'Il viaggio è lungo e complesso, ci sono tante difficoltà, alcune che ti mettono a rischio vita, ma tu sopravvivi, non tutte le persone accanto a te hanno la stessa sorte…',
       'Ti richiede molti più soldi di quelli che avevi preventivato e anche tante energie fisiche e mentali.',
     ],
-    track: 'new2',
     duration: 22,
     dense: true,
   },
@@ -161,7 +141,6 @@ const scenes = [
     body: [
       'Non sai parlare la lingua di questo nuovo Paese…',
     ],
-    track: 'new2',
     duration: 20,
     dense: true,
   },
@@ -170,7 +149,6 @@ const scenes = [
     label: 'L’arrivo',
     title: 'Non sai dove andare e cosa fare, non hai soldi, ti senti tanta stanchezza addosso, hai fame e ti senti male…',
     body: [],
-    track: 'new2',
     duration: 17,
   },
   {
@@ -181,7 +159,6 @@ const scenes = [
       'Ci vai, non avevi capito che ci fosse una lista d’attesa per l’ingresso…',
       'Ti dicono dove andare a mangiare provvisoriamente, mentre attendi alcuni giorni l’ingresso… dormi per strada, per fortuna è estate!',
     ],
-    track: 'new2',
     duration: 22,
     dense: true,
   },
@@ -193,7 +170,6 @@ const scenes = [
       'Ti accolgono delle persone professioniste che ti leggono tante regole della casa e ti consegnano un regolamento che è tradotto nella tua lingua. Da quanto comprendi avrai una stanza che condividerai con un’altra persona.',
       'Non capisci proprio tutte le regole, ma la stanchezza ti impedisce di fare domande, vuoi riposarti.',
     ],
-    track: 'new2',
     duration: 24,
     dense: true,
     photo: true,
@@ -206,7 +182,6 @@ const scenes = [
       'Ti manca tanto la tua famiglia e il tuo Paese anche se sai che non potevi restare là…',
       'Finalmente ti riposi un po’… la stanchezza fisica e mentale accumulata è davvero tanta, non avresti mai immaginato di sentirti così!',
     ],
-    track: 'new2',
     duration: 23,
     dense: true,
     photo: true,
@@ -214,7 +189,6 @@ const scenes = [
   {
     slide: 15,
     label: 'Foglietto giallo',
-    track: 'new3',
     paper: {
       color: 'yellow',
       label: 'Prendi il FOGLIETTO GIALLO',
@@ -236,7 +210,6 @@ const scenes = [
       'Sappi che per persone traumatizzate individuare e pensare ai propri desideri è molto difficile…',
       'Ma il desiderio è ciò che ci rende vivi!',
     ],
-    track: 'new3',
     checkpoint: {
       minimum: 7,
       hint: 'La domanda può restare aperta.',
@@ -252,7 +225,6 @@ const scenes = [
       'Immaginavi che con l’arrivo a destinazione tutto sarebbe stato in discesa, ma non è così…',
       'I documenti sono molto difficili da ottenere sia per la burocrazia, ma anche per il trattamento durante gli accessi in Questura… Spesso è mortificante…',
     ],
-    track: 'new3',
     duration: 24,
     dense: true,
   },
@@ -263,7 +235,6 @@ const scenes = [
     body: [
       'L’assenza dalla conoscenza della lingua ti frena e soprattutto ti chiedono competenze molto diverse da quelle che tu hai… eppure te la sei sempre cavata nella vita e nel tuo Paese sentivi di avere un valore come persona… qui a volte ti viene da dubitarne… rispetto a questi standard.',
     ],
-    track: 'new3',
     duration: 26,
     dense: true,
   },
@@ -276,7 +247,6 @@ const scenes = [
       'Capita così tante volte e quasi ti ci stai abituando, ma non bisogna abituarsi!',
       'Nota tecnica: si chiamano «micro aggressioni», sono sottili, quasi invisibili, ma hanno un impatto negativo fortissimo sulla persona!',
     ],
-    track: 'new3',
     duration: 26,
     dense: true,
   },
@@ -285,7 +255,6 @@ const scenes = [
     label: 'La famiglia',
     title: 'Da quando sei in accoglienza, riesci a contattare la tua famiglia…',
     body: ['Non stanno bene, ti chiedono quando possono raggiungerti e di mandargli soldi… ma tu non sai come aiutarli …'],
-    track: 'new3',
     duration: 18,
     dense: true,
   },
@@ -297,14 +266,12 @@ const scenes = [
       'Ci fermiamo qui nel nostro viaggio…',
       'Tutte le persone sono piene di risorse e competenze che sicuramente metteranno in campo, ma forse, su temi così ampi e complessi, sarebbe importante una riflessione che va oltre l’individuale …',
     ],
-    track: 'new3',
     duration: 22,
     dense: true,
   },
   {
     slide: 22,
     label: 'Foglietto azzurro',
-    track: 'new3',
     paper: {
       color: 'blue',
       label: 'Prendi il FOGLIETTO AZZURRO',
@@ -325,7 +292,6 @@ const scenes = [
       'Se lo desideri nell’altra stanza puoi trovare un albo illustrato sul trauma, si intitola «Il buco». Puoi leggerlo se lo vuoi.',
       'Gli albi illustrati non sono pensati solo per i bimbi, ma aiutano a riflettere anche gli adulti, in modo leggero e profondo, dando segnali di speranza.',
     ],
-    track: 'new3',
     checkpoint: {
       minimum: 6,
       hint: 'Prima di concludere, prenditi un ultimo momento.',
@@ -342,7 +308,6 @@ const scenes = [
       'Chissà quali meravigliosi incontri ci porteranno questi viaggi, magari alcuni tratti del nostro cammino si incroceranno… come oggi!',
       'È stato bello incontrarsi!',
     ],
-    track: 'new3',
     final: true,
     photo: true,
     dense: true,
@@ -353,10 +318,6 @@ const state = {
   started: false,
   index: 0,
   paused: false,
-  presenter: false,
-  muted: false,
-  volume: 0.34,
-  currentTrack: null,
   timer: null,
   remainingMs: 0,
   totalMs: 0,
@@ -364,13 +325,8 @@ const state = {
   gateUnlocked: false,
   lastTick: 0,
   transitioning: false,
-  autoRestartRemainingMs: 0,
   sessionId: 0,
 };
-
-Object.values(audio).forEach((track) => {
-  track.volume = 0;
-});
 
 function paragraphs(items = []) {
   return items.map((item) => `<p>${item}</p>`).join('');
@@ -395,80 +351,6 @@ function animate(targets, from, to) {
     return Promise.resolve();
   }
   return gsap.fromTo(targets, from, to).then();
-}
-
-function updateAudioButton() {
-  const isOff = state.muted || state.volume === 0;
-  dom.muteBtn.textContent = isOff ? 'Audio off' : 'Audio';
-  dom.muteBtn.setAttribute('aria-pressed', String(isOff));
-}
-
-async function unlockAudio() {
-  await Promise.all(Object.values(audio).map(async (track) => {
-    try {
-      await track.play();
-      track.pause();
-      track.currentTime = 0;
-    } catch (_) {
-      // Il browser può negare il preavvio; il click successivo riproverà.
-    }
-  }));
-}
-
-async function setTrack(name) {
-  if (!name) {
-    const oldTracks = Object.values(audio);
-    oldTracks.forEach((track) => {
-      gsap.to(track, {
-        volume: 0,
-        duration: 1.8,
-        overwrite: true,
-        onComplete: () => track.pause(),
-      });
-    });
-    state.currentTrack = null;
-    return;
-  }
-
-  const next = audio[name];
-  if (!next) return;
-
-  if (state.currentTrack === name) {
-    if (!state.paused) {
-      try { await next.play(); } catch (_) {}
-    }
-    gsap.to(next, { volume: state.muted ? 0 : state.volume, duration: 0.5, overwrite: true });
-    return;
-  }
-
-  const previous = state.currentTrack ? audio[state.currentTrack] : null;
-  state.currentTrack = name;
-
-  try { await next.play(); } catch (_) {}
-  gsap.to(next, {
-    volume: state.muted || state.paused ? 0 : state.volume,
-    duration: 2.2,
-    overwrite: true,
-  });
-
-  if (previous && previous !== next) {
-    gsap.to(previous, {
-      volume: 0,
-      duration: 2.2,
-      overwrite: true,
-      onComplete: () => previous.pause(),
-    });
-  }
-}
-
-function stopAllAudio(reset = false) {
-  Object.values(audio).forEach((track) => {
-    gsap.killTweensOf(track);
-    track.pause();
-    track.volume = 0;
-    if (reset) track.currentTime = 0;
-  });
-  state.currentTrack = null;
 }
 
 function clearSceneTimer() {
@@ -514,12 +396,6 @@ function tick() {
     if (state.remainingMs === 0) nextScene();
   }
 
-  if (scene.final && state.presenter && state.autoRestartRemainingMs > 0) {
-    state.autoRestartRemainingMs = Math.max(0, state.autoRestartRemainingMs - delta);
-    const seconds = Math.ceil(state.autoRestartRemainingMs / 1000);
-    dom.autoRestart.textContent = `Ritorno automatico alla pagina iniziale tra ${seconds} secondi.`;
-    if (state.autoRestartRemainingMs === 0) goHome();
-  }
 }
 
 function startSceneTimer(scene) {
@@ -528,7 +404,6 @@ function startSceneTimer(scene) {
   state.remainingMs = state.totalMs;
   state.gateRemainingMs = (scene.checkpoint?.minimum || 0) * 1000;
   state.gateUnlocked = !scene.checkpoint || state.gateRemainingMs === 0;
-  state.autoRestartRemainingMs = scene.final && state.presenter ? 20000 : 0;
   state.lastTick = performance.now();
 
   dom.sceneProgress.style.width = scene.final ? '100%' : '0%';
@@ -574,10 +449,6 @@ function renderScene(scene) {
   }
 
   dom.finalActions.hidden = !scene.final;
-  dom.autoRestart.hidden = !(scene.final && state.presenter);
-  if (scene.final && state.presenter) {
-    dom.autoRestart.textContent = 'Ritorno automatico alla pagina iniziale tra 20 secondi.';
-  }
 
   updateControls(scene);
 }
@@ -603,8 +474,6 @@ async function showScene(index, direction = 1) {
   state.index = index;
   const scene = scenes[index];
   renderScene(scene);
-  await setTrack(scene.track);
-  if (!state.started || sessionId !== state.sessionId) return;
 
   gsap.set(dom.scene, { opacity: 1, x: 0 });
   const animatedContent = scene.paper
@@ -645,39 +514,7 @@ function setPaused(paused) {
   dom.pauseIcon.textContent = paused ? '▶' : 'Ⅱ';
   dom.pauseLabel.textContent = paused ? 'Riprendi' : 'Pausa';
   dom.pauseBtn.setAttribute('aria-label', paused ? 'Riprendi l’esperienza' : 'Metti in pausa');
-
-  if (state.currentTrack) {
-    const track = audio[state.currentTrack];
-    if (paused) {
-      track.pause();
-    } else {
-      track.play().catch(() => {});
-      gsap.to(track, { volume: state.muted ? 0 : state.volume, duration: 0.4, overwrite: true });
-    }
-  }
   state.lastTick = performance.now();
-}
-
-function toggleMute() {
-  state.muted = !state.muted;
-  updateAudioButton();
-  Object.entries(audio).forEach(([name, track]) => {
-    const target = !state.muted && name === state.currentTrack && !state.paused ? state.volume : 0;
-    gsap.to(track, { volume: target, duration: 0.35, overwrite: true });
-  });
-}
-
-function setVolume(value) {
-  state.volume = Math.max(0, Math.min(1, Number(value) / 100));
-  state.muted = state.volume === 0;
-  updateAudioButton();
-  if (state.currentTrack) {
-    gsap.to(audio[state.currentTrack], {
-      volume: state.muted || state.paused ? 0 : state.volume,
-      duration: 0.2,
-      overwrite: true,
-    });
-  }
 }
 
 async function playCountdown() {
@@ -709,7 +546,6 @@ async function startExperience() {
   if (state.started) return;
   state.started = true;
   const sessionId = ++state.sessionId;
-  state.presenter = dom.presenterMode.checked;
   state.paused = false;
   state.index = 0;
 
@@ -717,10 +553,7 @@ async function startExperience() {
   dom.homeScreen.hidden = true;
   dom.experience.hidden = false;
   dom.controls.hidden = true;
-  dom.presenterBadge.hidden = !state.presenter;
 
-  await unlockAudio();
-  if (!state.started || sessionId !== state.sessionId) return;
   await playCountdown();
   if (!state.started || sessionId !== state.sessionId) return;
   dom.controls.hidden = false;
@@ -729,13 +562,11 @@ async function startExperience() {
 
 function goHome() {
   clearSceneTimer();
-  stopAllAudio(true);
   state.started = false;
   state.sessionId += 1;
   state.paused = false;
   state.transitioning = false;
   state.index = 0;
-  state.presenter = false;
 
   dom.app.classList.add('is-home');
   dom.app.classList.remove('has-photo');
@@ -745,7 +576,6 @@ function goHome() {
   dom.countdown.hidden = true;
   dom.pauseNotice.hidden = true;
   dom.homeScreen.hidden = false;
-  dom.presenterBadge.hidden = true;
   dom.sceneCounter.textContent = 'Esperienza immersiva';
   dom.overallProgress.style.width = '0%';
   dom.startBtn.focus({ preventScroll: true });
@@ -771,8 +601,6 @@ dom.nextBtn.addEventListener('click', nextScene);
 dom.pauseBtn.addEventListener('click', () => setPaused(!state.paused));
 dom.checkpointBtn.addEventListener('click', nextScene);
 dom.restartBtn.addEventListener('click', goHome);
-dom.muteBtn.addEventListener('click', toggleMute);
-dom.volumeSlider.addEventListener('input', (event) => setVolume(event.target.value));
 dom.fullscreenBtn.addEventListener('click', toggleFullscreen);
 
 window.addEventListener('keydown', (event) => {
@@ -783,14 +611,9 @@ window.addEventListener('keydown', (event) => {
     event.preventDefault();
     setPaused(!state.paused);
   }
-  if (event.key.toLowerCase() === 'm') toggleMute();
   if (event.key.toLowerCase() === 'f') toggleFullscreen();
 });
 
 document.addEventListener('visibilitychange', () => {
   if (document.hidden && state.started && !state.paused) setPaused(true);
 });
-
-const params = new URLSearchParams(window.location.search);
-dom.presenterMode.checked = params.get('presenter') === '1';
-updateAudioButton();

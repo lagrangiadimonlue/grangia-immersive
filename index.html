@@ -21,7 +21,6 @@
       </a>
 
       <div class="topbar-status" aria-live="polite">
-        <span id="presenterBadge" class="presenter-badge" hidden>Modalità presentatore</span>
         <span id="sceneCounter">Esperienza immersiva</span>
       </div>
     </header>
@@ -43,18 +42,7 @@
           <button id="startBtn" class="button button-primary" type="button">
             Inizia l’esperienza immersiva
           </button>
-
-          <label class="presenter-option">
-            <input id="presenterMode" type="checkbox" />
-            <span class="switch" aria-hidden="true"></span>
-            <span>
-              <strong>Modalità presentatore</strong>
-              <small>Al termine ritorna automaticamente a questa pagina.</small>
-            </span>
-          </label>
         </div>
-
-        <p class="home-note">L’audio inizierà dopo il click. È sempre regolabile o disattivabile.</p>
       </div>
     </section>
 
@@ -78,7 +66,6 @@
 
           <div id="finalActions" class="final-actions" hidden>
             <button id="restartBtn" class="button button-primary" type="button">Ricomincia</button>
-            <p id="autoRestart" class="auto-restart" hidden></p>
           </div>
         </div>
       </article>
@@ -111,17 +98,9 @@
       </div>
 
       <div class="utility-controls">
-        <button id="muteBtn" class="control-button control-text" type="button" aria-pressed="false">Audio</button>
-        <label class="volume-control" aria-label="Volume">
-          <input id="volumeSlider" type="range" min="0" max="100" value="34" />
-        </label>
         <button id="fullscreenBtn" class="control-button control-text" type="button">Schermo intero</button>
       </div>
     </footer>
-
-    <audio id="audioNew1" src="assets/audio/new1.mp3" preload="auto" loop></audio>
-    <audio id="audioNew2" src="assets/audio/new2.mp3" preload="auto" loop></audio>
-    <audio id="audioNew3" src="assets/audio/new3.mp3" preload="auto" loop></audio>
   </main>
 
   <script src="assets/vendor/gsap.min.js"></script>

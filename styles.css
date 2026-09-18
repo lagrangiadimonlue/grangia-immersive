@@ -134,12 +134,6 @@ button {
   letter-spacing: 0.04em;
 }
 
-.presenter-badge {
-  padding-right: 16px;
-  border-right: 1px solid var(--line);
-  color: var(--ink);
-}
-
 .overall-progress {
   position: fixed;
   z-index: 22;
@@ -236,71 +230,6 @@ button {
 .button-primary:focus-visible {
   color: white;
   background: #343531;
-}
-
-.presenter-option {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-}
-
-.presenter-option input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  opacity: 0;
-}
-
-.switch {
-  position: relative;
-  flex: 0 0 auto;
-  width: 42px;
-  height: 24px;
-  border: 1px solid var(--ink);
-  border-radius: 99px;
-}
-
-.switch::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--ink);
-  transition: transform 180ms ease;
-}
-
-.presenter-option input:checked + .switch::after {
-  transform: translateX(18px);
-}
-
-.presenter-option input:focus-visible + .switch {
-  outline: 3px solid rgba(25, 26, 24, 0.28);
-  outline-offset: 3px;
-}
-
-.presenter-option strong,
-.presenter-option small {
-  display: block;
-}
-
-.presenter-option strong {
-  font-size: 13px;
-}
-
-.presenter-option small,
-.home-note {
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.4;
-}
-
-.home-note {
-  margin: 20px 0 0;
 }
 
 .experience {
@@ -450,12 +379,6 @@ button {
   margin-top: 34px;
 }
 
-.auto-restart {
-  margin: 0;
-  color: var(--muted);
-  font-size: 13px;
-}
-
 .countdown {
   position: fixed;
   z-index: 50;
@@ -561,16 +484,6 @@ button {
   background: var(--line);
 }
 
-.volume-control {
-  display: flex;
-  width: 92px;
-}
-
-.volume-control input {
-  width: 100%;
-  accent-color: var(--ink);
-}
-
 @media (max-width: 760px) {
   :root {
     --bar-height: 66px;
@@ -580,7 +493,6 @@ button {
     gap: 8px;
   }
 
-  .presenter-badge,
   .wordmark small {
     display: none;
   }
@@ -636,7 +548,6 @@ button {
     grid-row: 2;
   }
 
-  .volume-control,
   #fullscreenBtn,
   #pauseLabel {
     display: none;
